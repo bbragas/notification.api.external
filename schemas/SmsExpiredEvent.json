@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://vegait.visualstudio.com/Notification/_git/notification.api.external?path=/schemas/SmsExpiredEvent.json",
+  "type": "object",
+  "title": "SmsExpiredEvent",
+  "description": "The message has been sent and has either expired due to pending past its validity period (our platform default is 48 hours), or the delivery report from the operator has reverted the expired as a final status.",
+  "required": [
+    "id",
+    "contentType",
+    "source",
+    "version",
+    "description",
+    "type"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A guid that represents the identifier of the SmsExpiredEvent on the notification platform.",
+      "examples": [
+        "4c793fe0-7065-4555-b962-8ad2b5238ade"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "description": "A text that describe the version of de SmsExpiredEvent.",
+      "examples": [
+        "1.0"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "description": "A text that represents the project where the SmsExpiredEvent is located.",
+      "examples": [
+        "Notification.Api.External"
+      ]
+    },
+    "contentType": {
+      "type": "string",
+      "description": "A text that represents a mime type of the content.",
+      "examples": [
+        "application/json;base64"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "description": "A text that describe the full name of the SmsExpiredEvent on the Notification.Api.External.",
+      "examples": [
+        "Notification.Api.External.Application.Events.v1.SmsExpiredEvent"
+      ]
+    },
+    "schema": {
+      "type": "string",
+      "default": "null",
+      "description": "A URI which addressed a Json File that describe the SmsExpiredEvent structure.",
+      "examples": [
+        "https://vegait.visualstudio.com/Notification/_git/notification.api.external?path=/schemas/SmsExpiredEvent.json"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "description": "A text that describe the SmsExpiredEvent.",
+      "examples": [
+        "The message has not been delivered"
+      ]
+    }
+  }
+}

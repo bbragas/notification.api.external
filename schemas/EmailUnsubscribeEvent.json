@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://vegait.visualstudio.com/Notification/_git/notification.api.external?path=/schemas/EmailUnsubscribeEvent.json",
+  "type": "object",
+  "title": "EmailUnsubscribeEvent",
+  "description": "Whenever a recipient requests not to receive your emails anymore.",
+  "required": [
+    "id",
+    "contentType",
+    "source",
+    "version",
+    "description",
+    "type"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A guid that represents the identifier of the EmailUnsubscribeEvent on the notification platform.",
+      "examples": [
+        "4c793fe0-7065-4555-b962-8ad2b5238ade"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "description": "A text that describe the version of de EmailUnsubscribeEvent.",
+      "examples": [
+        "1.0"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "description": "A text that represents the project where the EmailUnsubscribeEvent is located.",
+      "examples": [
+        "Notification.Api.External"
+      ]
+    },
+    "contentType": {
+      "type": "string",
+      "description": "A text that represents a mime type of the content.",
+      "examples": [
+        "application/json;base64"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "description": "A text that describe the full name of the EmailUnsubscribeEvent on the Notification.Api.External.",
+      "examples": [
+        "Notification.Api.External.Application.Events.v1.EmailUnsubscribeEvent"
+      ]
+    },
+    "schema": {
+      "type": "string",
+      "default": "null",
+      "description": "A URI which addressed a Json File that describe the EmailUnsubscribeEvent structure.",
+      "examples": [
+        "https://vegait.visualstudio.com/Notification/_git/notification.api.external?path=/schemas/EmailUnsubscribeEvent.json"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "description": "A text that describe the EmailUnsubscribeEvent.",
+      "examples": [
+        "The message has not been delivered"
+      ]
+    }
+  }
+}
